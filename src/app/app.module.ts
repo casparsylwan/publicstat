@@ -8,12 +8,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopnavComponent } from './components/main/topnav/topnav.component';
 import { LandingComponent } from './components/pages/landing/landing.component';
+import { FrontsectionComponent } from './components/main/frontsection/frontsection.component';
+import { BaseinfoComponent } from './components/pages/baseinfo/baseinfo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopnavComponent,
-    LandingComponent
+    LandingComponent,
+    FrontsectionComponent,
+    BaseinfoComponent
   ],
   imports: [
     BrowserModule,
