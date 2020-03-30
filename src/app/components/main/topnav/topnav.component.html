@@ -1,0 +1,23 @@
+<nav>
+    <div class="text">
+        <h1 (change)="writeSecondText(publicStatistics)">
+            <teximate [text]="publicStatistics" [enter]="enterAnimation">|</teximate>
+
+        </h1>
+        <h2 *ngIf="(secondText)">
+
+            <teximate [text]="pageinfo" [enter]="enterAnimation">|</teximate>
+
+        </h2>
+    </div>
+    
+    <div (click)="openMenu()" class="threelines">
+        <p [ngClass]="[line]" [ngStyle]="{'marginTop': (spinTheLines) ? '10px' : '0',
+        'transform': (spinTheLines) ? 'rotate(225deg)' : 'rotate(0deg)' }"></p>
+        <p [ngClass]="[line]" [ngStyle]="{'opacity':  (spinTheLines) ? '0' : '1',
+                           'transform': (spinTheLines) ? 'rotate(425deg)' : 'rotate(0deg)' }"></p>
+        <p [ngClass]="[line]" [ngStyle]="{'marginTop': (spinTheLines) ? '-17px' : '0',
+                           'transform': (spinTheLines) ? 'rotate(315deg)' : 'rotate(0deg)' }"></p>
+    </div>
+
+</nav>
