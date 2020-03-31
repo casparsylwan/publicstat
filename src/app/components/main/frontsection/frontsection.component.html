@@ -19,5 +19,7 @@
         </div>
     </div>
     </div>
-    <div class="optionfield"></div>  
+    <div class="optionfield"
+        [ngStyle] = "{'height': !(openMainLeft) ? ' 4rem ' : '0',
+                      'border-bottom' : !(openMainLeft) ? '1px solid #fff' : '0px solid #fff'}"></div>  
 </div>
