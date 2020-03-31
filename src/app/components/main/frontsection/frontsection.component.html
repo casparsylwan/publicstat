@@ -1,26 +1,47 @@
-
 <div class="wraper">
-    <div class="top">
-    <div (click)="mainLeftFocus()"
-          class="mainleft"
-          [ngStyle] = "{'width': !(openMainLeft) ? ' 50% ' : '80%',
-                       'height': !(openMainLeft) ? ' 100% ' : '150%'}"
-          ></div>
-    <div class="mainrigth"
-    [ngStyle] = "{'width': !(openMainLeft) ? ' 50% ' : '20%',
-                 'height': !(openMainLeft) ? ' 100% ' : '150%'}">
-        <div class="maintop">
-            {{ "top" }}
-        </div>
-        <div class="maindown">
+    <div class="top"
+        [ngStyle]="stateChangeMainTop()">
 
-            {{ "down" }}
+        <div (click)="mainLeftFocus()" 
+            class="mainleft" 
+            [ngStyle]="stateChangeMainLeft()">
+
+            {{ "main" }}
 
         </div>
+        <!--
+            "{'width': !(openMainLeft) ? ' 50% ' : '20%',
+                        'height': !(openMainLeft) ? ' 100% ' : '150%'}"
+        -->
+
+
+        <div class="mainrigth" 
+            [ngStyle]="stateChangeMainRigth()">
+
+            <div (click)="mainRigthTopFocus()" 
+                class="maintop"
+                [ngStyle] ="stateChangeMainRigthTop()"
+                >
+                {{ "top" }}
+
+            </div>
+
+            <div class="maindown"
+                (click)="mainRigthDown()"
+                 [ngStyle]="stateChangemaindown()">
+
+                {{ "down" }}
+
+            </div>
+        </div>
     </div>
+    <div class="optionfield" 
+        [ngStyle]="stateChangeMainOptionField()">
     </div>
-    <div class="optionfield"
-        [ngStyle] = "{'height': !(openMainLeft) ? ' 4rem ' : '0',
-                      'border-bottom' : !(openMainLeft) ? '1px solid #fff' : '0px solid #fff',
-                      'transition'    : (openMainLeft) ? 'all ease-in 500ms 0ms' : 'all ease-in 500ms 1s'}"></div>  
 </div>
+
+<!--
+    "{'height': !(openMainLeft) ? ' 4rem ' : '0',
+                      'border-bottom' : !(openMainLeft) ? '1px solid #fff' : '0px solid #fff',
+                      'transition'    :  (openMainLeft) ? 'all ease-in 500ms 0ms' : 'all ease-in 500ms 1000ms'}"
+-->

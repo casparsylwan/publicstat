@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: row;
     height: 30rem;
+    
 }
 
 .mainleft, .mainrigth{
@@ -51,7 +52,19 @@
     transition: height ease-in 500ms 500ms;
 }
 
+@media(max-width: 700px){
 
+    .wraper{      
+        width: 100vw;
+
+    }
+
+    .top{
+        height: 15rem;
+        
+    }
+
+}
 
 
 

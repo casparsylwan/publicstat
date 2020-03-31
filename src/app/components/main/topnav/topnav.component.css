@@ -14,7 +14,7 @@ nav{
     position: relative;
     margin-top: 1.2rem;
     float: right;
-    
+    margin-right: 1rem;
     background-color: #000;
     z-index: 5;
 }
