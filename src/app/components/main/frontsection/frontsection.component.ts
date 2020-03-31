@@ -3,9 +3,19 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-frontsection',
   templateUrl: './frontsection.component.html',
-  styleUrls: ['./frontsection.component.css']
+  styleUrls: ['./frontsection.component.css'],
+  host: {
+    "(window:resize)":"onWindowResize($event)"
+  }
 })
 export class FrontsectionComponent implements OnInit {
+
+  // Get screenSize
+  screenSize:number;
+  isMobile: boolean = false;
+  width:number = window.innerWidth;
+  height:number = window.innerHeight;
+  mobileWidth:number  = 760;
 
   //State change new view
   viewOld:number = 0;
@@ -17,11 +27,18 @@ export class FrontsectionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public mainTopFocus() {}
+  onWindowResize(event) {
+    this.width = event.target.innerWidth;
+    this.height = event.target.innerHeight;
+    this.isMobile = this.width < this.mobileWidth;
+}
+
+
+ // public mainTopFocus() {}
 
   public mainRigthTopFocus(){
     console.log(this.views);
-
+    console.log(this.screenSize)
     if(this.views===2){
 
       this.views = 0;
@@ -85,7 +102,7 @@ export class FrontsectionComponent implements OnInit {
       case (1): {
         console.log(this.views)
         return {
-          'width': '60%'
+          'width': '65%'
         }
         break;
       }
@@ -120,7 +137,7 @@ export class FrontsectionComponent implements OnInit {
       case (1): {
         console.log(this.views)
         return {
-          'width': '40%',
+          'width': '35%',
           'heigth': '100%'
         }
         break;
