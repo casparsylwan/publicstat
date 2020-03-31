@@ -21,5 +21,6 @@
     </div>
     <div class="optionfield"
         [ngStyle] = "{'height': !(openMainLeft) ? ' 4rem ' : '0',
-                      'border-bottom' : !(openMainLeft) ? '1px solid #fff' : '0px solid #fff'}"></div>  
+                      'border-bottom' : !(openMainLeft) ? '1px solid #fff' : '0px solid #fff',
+                      'transition'    : (openMainLeft) ? 'all ease-in 500ms 0ms' : 'all ease-in 500ms 1s'}"></div>  
 </div>
