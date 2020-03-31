@@ -85,7 +85,7 @@ export class FrontsectionComponent implements OnInit {
       case (1): {
         console.log(this.views)
         return {
-          'width': '80%'
+          'width': '60%'
         }
         break;
       }
@@ -120,7 +120,7 @@ export class FrontsectionComponent implements OnInit {
       case (1): {
         console.log(this.views)
         return {
-          'width': '20%',
+          'width': '40%',
           'heigth': '100%'
         }
         break;
