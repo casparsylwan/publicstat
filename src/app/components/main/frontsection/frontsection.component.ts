@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FrontsectionComponent implements OnInit {
 
+  //Booleans for section in focus
+
+  openMainLeft:boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public mainLeftFocus(){
+
+    this.openMainLeft = !this.openMainLeft;
+
   }
 
 }

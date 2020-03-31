@@ -6,7 +6,7 @@ import { BaseinfoComponent } from './components/pages/baseinfo/baseinfo.componen
 
 const routes: Routes = [
   {path:'', component: LandingComponent},
-  {path:'covid', component: BaseinfoComponent}];
+  {path:'base', component: BaseinfoComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

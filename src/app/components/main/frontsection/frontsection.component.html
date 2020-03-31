@@ -1,8 +1,14 @@
 
 <div class="wraper">
     <div class="top">
-    <div class="mainleft"></div>
-    <div class="mainrigth">
+    <div (click)="mainLeftFocus()"
+          class="mainleft"
+          [ngStyle] = "{'width': !(openMainLeft) ? ' 50% ' : '80%',
+                       'height': !(openMainLeft) ? ' 100% ' : '150%'}"
+          ></div>
+    <div class="mainrigth"
+    [ngStyle] = "{'width': !(openMainLeft) ? ' 50% ' : '20%',
+                 'height': !(openMainLeft) ? ' 100% ' : '150%'}">
         <div class="maintop">
             {{ "top" }}
         </div>
