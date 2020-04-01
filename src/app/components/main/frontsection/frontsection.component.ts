@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScbCall } from '../../../source/scb';
 
 @Component({
   selector: 'app-frontsection',
@@ -9,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
   }
 })
 export class FrontsectionComponent implements OnInit {
+
+  call:ScbCall = new ScbCall();
 
   // Get screenSize
   screenSize:number;
