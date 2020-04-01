@@ -81,10 +81,19 @@ export class FrontsectionComponent implements OnInit {
 
     switch(this.views){
       case (1):{
-        return {
-          'height': '40rem',
-          'transition': 'height ease-in 500ms 500ms'
+        if(this.isMobile){
+          return {
+            'height' : '10rem'
+          }
+        }else{
+          return {
+            'height': '40rem',
+            'transition': 'height ease-in 500ms 500ms'
+          }
+
+
         }
+       
         break;
       }default : {
         return {
