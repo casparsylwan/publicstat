@@ -81,17 +81,16 @@ export class FrontsectionComponent implements OnInit {
 
     switch(this.views){
       case (1):{
-        if(this.isMobile){
+        if( this.mobileWidth>this.width ){
           return {
-            'height' : '10rem'
+            'height' : '10rem',
+            'transition': 'height ease-in 500ms 500ms'
           }
         }else{
           return {
             'height': '40rem',
             'transition': 'height ease-in 500ms 500ms'
           }
-
-
         }
        
         break;
