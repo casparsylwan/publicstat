@@ -85,7 +85,7 @@ export class FrontsectionComponent implements OnInit {
       case (1):{
         if( this.mobileWidth>this.width ){
           return {
-            'height' : '20rem',
+            'height' : '30rem',
             'transition': 'height ease-in 500ms 500ms'
           }
         }else{
@@ -96,7 +96,8 @@ export class FrontsectionComponent implements OnInit {
         }
        
         break;
-      }default : {
+      }
+      default : {
         return {
           'heigth' : '30rem',
           'transition': 'height ease-in 500ms 500ms'
@@ -111,11 +112,13 @@ export class FrontsectionComponent implements OnInit {
     switch (this.views) {
       case (1): {
         if( this.mobileWidth>this.width ){
+          
         return {
           'width': '100%'
         }
       }else{
 
+        
         return {
           'width': '65%'
         }
@@ -124,24 +127,47 @@ export class FrontsectionComponent implements OnInit {
         break;
       }
       case (2): {
-        
-        return {
-          'width': '0%',
-          'transition': 'width ease-in 500ms 500ms'
+        if( this.mobileWidth>this.width ){
+          console.log(this.views)
+          return {
+                  'width': '100%',
+                  'height': '0',
+                  'transition': 'height ease-in 500ms 500ms'
+                  }          
+
+        }else{
+
+          return {
+            'width': '0%',
+            'transition': 'width ease-in 500ms 0ms, height ease-in 500ms 500ms'
+          }
+
+
         }
+        
         break;
       }
       case (3): {
+        if( this.mobileWidth>this.width ){
+        return{
+          'width': '0',
+          'height': '0%',
+          'transition': 'width ease-in 500ms, height ease-in 500ms 500ms'
+        }
+      }else{
         return{
           'width': '0',
           'transition': 'width ease-in 500ms'
         }
       }
+      }
       default: {
         if( this.mobileWidth>this.width ){
         return {
           'width': '100%',
-          'transition': 'width ease-in 500ms 0ms'
+          'height': '100%',
+          'transition': 'height ease-in 500ms'          
+
         }
       }else{
         return {
@@ -174,14 +200,24 @@ export class FrontsectionComponent implements OnInit {
         break;
       }
       case (2): {
-        
+        if( this.mobileWidth>this.width ){
         return {
-          'width': '50%',
+          'width': '100%',
           'heigth': '150%'
         }
-        break;
       }
-      default: {
+        break;
+      }case (3): {
+        if(this.mobileWidth>this.width ){
+          return {
+            'width': '100%',
+            
+            
+          }
+        }
+
+      
+      } default: {
 
         if( this.mobileWidth>this.width ){
 
@@ -263,13 +299,29 @@ export class FrontsectionComponent implements OnInit {
                        'height' : '100%',
                        'transition': 'height ease-in 500ms 0ms'
                       }
+                    }else{
+
+                      return { 'height' : '50%',
+                               'transition': 'height ease-in 500ms 0ms'
+
+                      }
                     }
       
       }case(2) : {
-        return { 'background-color': '#777700',
-                 'height': '50%',
+
+        if( this.mobileWidth>this.width ){
+          return { 'background-color': '#777700',
+                    'height': '100%',
+                    
+                    'transition': 'height ease-in 500ms 0ms'
+                  }
+          }else{
+                return { 
+                 'height': '0%',
                  'transition': 'height ease-in 500ms 0ms'
                 }
+
+              }
       
               
       }case (3) :{
