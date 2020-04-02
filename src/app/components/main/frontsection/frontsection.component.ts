@@ -40,8 +40,7 @@ export class FrontsectionComponent implements OnInit {
  // public mainTopFocus() {}
 
   public mainRigthTopFocus(){
-    console.log(this.views);
-    console.log(this.screenSize)
+    
     if(this.views===2){
 
       this.views = 0;
@@ -226,7 +225,7 @@ export class FrontsectionComponent implements OnInit {
         break;
       }
       case (2): {
-        console.log(this.views)
+        
         return {
           'width': '200%',
           'height': '100%',
@@ -241,7 +240,7 @@ export class FrontsectionComponent implements OnInit {
       
       
       } default: {
-        console.log(this.views)
+      
         return {
           'width': '100%',
           'heigth': '50%',
@@ -258,16 +257,17 @@ export class FrontsectionComponent implements OnInit {
     switch(this.views){
       case(1) : {
 
-        if( this.mobileWidth<this.width ){
-        return { 'background-color': '#777700',
-                 'height' : '100%',
-                 'transition': 'height ease-in 500ms 0ms'
-                }
-              }
+        if( this.mobileWidth>this.width ){
+
+              return { 'background-color': '#777700',
+                       'height' : '100%',
+                       'transition': 'height ease-in 500ms 0ms'
+                      }
+                    }
       
       }case(2) : {
         return { 'background-color': '#777700',
-                 'height': '0',
+                 'height': '50%',
                  'transition': 'height ease-in 500ms 0ms'
                 }
       
@@ -315,17 +315,17 @@ export class FrontsectionComponent implements OnInit {
 
     switch (this.views) {
       case (1): {
-        console.log(this.views)
+        
         return '#fff'
         break;
       }
       case (2): {
-        console.log(this.views)
+        
         return '#ff0'
         break;
       }
       default: {
-        console.log(this.views)
+        
         return '#00f'
         break;
       }
