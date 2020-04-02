@@ -19,7 +19,7 @@
 
 .mainleft, .mainrigth{
     height: 100%;
-    width: 50%;
+    width:  50%;
     transition: width ease-in 500ms,
                 height ease-in 500ms 1s;
     
@@ -56,14 +56,28 @@
 
     .wraper{      
         width: 100vw;
-
     }
 
     .top{
-        height: 15rem;
+        flex-direction: column;
+        height: 15rem; 
+        align-items: center;
         
+               
     }
 
+    .mainrigth{
+        display: flex;
+        flex-direction: row;
+        border:solid black 1px;
+
+    }
+
+    .maintop, .maindown{ 
+        height: 100%;
+    }
+
+  
 }
 
 

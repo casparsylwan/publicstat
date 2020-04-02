@@ -86,7 +86,7 @@ export class FrontsectionComponent implements OnInit {
       case (1):{
         if( this.mobileWidth>this.width ){
           return {
-            'height' : '10rem',
+            'height' : '20rem',
             'transition': 'height ease-in 500ms 500ms'
           }
         }else{
@@ -111,14 +111,21 @@ export class FrontsectionComponent implements OnInit {
 
     switch (this.views) {
       case (1): {
-        console.log(this.views)
+        if( this.mobileWidth>this.width ){
+        return {
+          'width': '100%'
+        }
+      }else{
+
         return {
           'width': '65%'
         }
+
+      }
         break;
       }
       case (2): {
-        console.log(this.views)
+        
         return {
           'width': '0%',
           'transition': 'width ease-in 500ms 500ms'
@@ -132,11 +139,17 @@ export class FrontsectionComponent implements OnInit {
         }
       }
       default: {
-        console.log(this.views)
+        if( this.mobileWidth>this.width ){
+        return {
+          'width': '100%',
+          'transition': 'width ease-in 500ms 0ms'
+        }
+      }else{
         return {
           'width': '50%',
           'transition': 'width ease-in 500ms 0ms'
         }
+      }
         break;
       }
     }
@@ -146,15 +159,23 @@ export class FrontsectionComponent implements OnInit {
 
     switch (this.views) {
       case (1): {
-        console.log(this.views)
+        if( this.mobileWidth>this.width ){
+        return {
+          'width': '100%',
+          'heigth': '0%'
+        }
+      }else{
+
         return {
           'width': '35%',
           'heigth': '100%'
         }
+
+      }
         break;
       }
       case (2): {
-        console.log(this.views)
+        
         return {
           'width': '50%',
           'heigth': '150%'
@@ -162,11 +183,25 @@ export class FrontsectionComponent implements OnInit {
         break;
       }
       default: {
-        console.log(this.views)
-        return {
-          'width': '50%',
-          'heigth': '100%'
+
+        if( this.mobileWidth>this.width ){
+
+          return {
+          'width': '100%',
+          'heigth': '50%'
         }
+
+
+        }else{
+
+          return {
+            'width': '50%',
+            'heigth': '100%'
+          }
+
+        }
+        
+        
         break;
       }
 
@@ -178,12 +213,16 @@ export class FrontsectionComponent implements OnInit {
 
     switch (this.views) {
       case (1): {
-        console.log(this.views)
+
+        if( this.mobileWidth<this.width ){
+      
         return {
           'width': '100%',
           'height': '50%',
           'transition': 'height ease-in 500ms 500ms'
         }
+
+      }
         break;
       }
       case (2): {
@@ -218,10 +257,13 @@ export class FrontsectionComponent implements OnInit {
 
     switch(this.views){
       case(1) : {
+
+        if( this.mobileWidth<this.width ){
         return { 'background-color': '#777700',
-                 'height' : '50%',
+                 'height' : '100%',
                  'transition': 'height ease-in 500ms 0ms'
                 }
+              }
       
       }case(2) : {
         return { 'background-color': '#777700',
@@ -238,6 +280,7 @@ export class FrontsectionComponent implements OnInit {
               
               
               }default : {
+                
         return { 'background-color': '#777700',
                  'transition': 'height ease-in 500ms, width ease-in 500ms'
                  
